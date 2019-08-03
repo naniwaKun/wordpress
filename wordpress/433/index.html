@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>wordpress 4.7.0 4.7.1 の脆弱性に関して &middot; あんなことやこんなこと</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="あんなことやこんなこと" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">あんなことやこんなこと</h2>
+				</a>
+				<ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/">Posts</a></li>
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        naniwa
+        <br>
+        <span>on&nbsp;</span><time datetime="2017-02-08 01:40:36 &#43;0000 UTC">February 8, 2017</time>
+</div>
+		<h1 class="post-title">wordpress 4.7.0 4.7.1 の脆弱性に関して</h1>
+<div class="post-line"></div>
+
+		
+
+		<p>すでに公開・公表されている脆弱性に関してです。</p>
+
+<p>日本メディアに関しては以下にアナウンスされています。</p>
+
+<p><a href="https://www.ipa.go.jp/security/ciadr/vul/20170206-wordpress.html">https://www.ipa.go.jp/security/ciadr/vul/20170206-wordpress.html</a></p>
+
+<p>バージョン、4.7.0、4.7.1を使っている方は4.7.2へ至急アップデートを行ってください。</p>
+
+<p>内容はwordpressに備え付けのrestAPIを叩けば記事の内容が勝手に改ざんできるということ。</p>
+
+<p>自動アップデートができていない現象があったので管理者は自分で確認したほうがいいです。</p>
+
+<p>この記事は再現性のレポートになります。POCも公開されています。以下のコード。</p>
+
+<p><a href="https://github.com/linuxsec/pentest/blob/master/ruby/wordpress/41224.rb">https://github.com/linuxsec/pentest/blob/master/ruby/wordpress/41224.rb</a></p>
+
+<p>rubyコードだけど、WebAPIを叩ければ誰でも単純に実行できます。</p>
+
+<p>すぐにアップデートしましょう。</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/wordpress/430/" class="left arrow">&#8592;</a>
+		<a href="/wordpress/652/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2019-08-03 14:21:08.378592581 &#43;0000 UTC m=&#43;0.289305674">2019</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

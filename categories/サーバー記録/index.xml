@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>サーバー記録 on あんなことやこんなこと</title>
+    <link>https://test.cfw4.tokyo/categories/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E8%A8%98%E9%8C%B2/</link>
+    <description>Recent content in サーバー記録 on あんなことやこんなこと</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 17 Sep 2017 21:20:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://test.cfw4.tokyo/categories/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E8%A8%98%E9%8C%B2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>32bitUEFIのスティックPCのdebian（64bit）を8から9にアップグレードした話</title>
+      <link>https://test.cfw4.tokyo/wordpress/740/</link>
+      <pubDate>Sun, 17 Sep 2017 21:20:02 +0000</pubDate>
+      
+      <guid>https://test.cfw4.tokyo/wordpress/740/</guid>
+      <description>スティックPC、DG-STK1B でマイクラ鯖を立てた話
+この記事の続き。
+前回は32bitUEFI環境に64bitlinuxをインストールするに当たって、以下のOSイメージを使えば一発ですよ。という話をした。http://cdimage.debian.org/cdimage/unofficial/efi-development/jessie-upload3/ 
+同じ状況の方がアップグレードするための話
+前回の記事に結構アクセスが来ていて、反応を見ていると楽しかった。スティックPCでWindowsが重くてアップデートできなくなった難民の方や、子供ために固定費を浮かせてマイクラ鯖立てるお父さんとかｗ
+32bitでインストールするのは簡単だけど、ちょうど移行の時期で、64bitじゃないとパフォーマンスが出ないソフトが結構あった。javaのヒープとかね。だからみんなの目に止まったんだと思う。
+それから時間は過ぎて、debianのアップデートがきた。debianは結構お硬いイメージのディストリビューションで、パッケージがもろ古いので、早くアップデートしたくて、debianの&amp;#8221;unofficial&amp;#8221;なパッケージを監視していたが、アナウンスがない。重い腰を上げて調べてみると、stretch(9)では、公式に対応したそうだ。
+なので、この状態のままアップグレードを強行することにした。
+以下の手順を参照されたい。
+無事に再起動できた。
+最近はマイクラに飽きてきて、たまにしかサーバーを起動しなくなった。その代わりにwebで使えるIDEをインストールしたので今度はその話をしようかな。</description>
+    </item>
+    
+    <item>
+      <title>wordpress 4.7.0 4.7.1 の脆弱性に関して</title>
+      <link>https://test.cfw4.tokyo/wordpress/433/</link>
+      <pubDate>Wed, 08 Feb 2017 01:40:36 +0000</pubDate>
+      
+      <guid>https://test.cfw4.tokyo/wordpress/433/</guid>
+      <description>すでに公開・公表されている脆弱性に関してです。
+日本メディアに関しては以下にアナウンスされています。
+https://www.ipa.go.jp/security/ciadr/vul/20170206-wordpress.html
+バージョン、4.7.0、4.7.1を使っている方は4.7.2へ至急アップデートを行ってください。
+内容はwordpressに備え付けのrestAPIを叩けば記事の内容が勝手に改ざんできるということ。
+自動アップデートができていない現象があったので管理者は自分で確認したほうがいいです。
+この記事は再現性のレポートになります。POCも公開されています。以下のコード。
+https://github.com/linuxsec/pentest/blob/master/ruby/wordpress/41224.rb
+rubyコードだけど、WebAPIを叩ければ誰でも単純に実行できます。
+すぐにアップデートしましょう。</description>
+    </item>
+    
+    <item>
+      <title>apacheからnginxへ移行した話</title>
+      <link>https://test.cfw4.tokyo/wordpress/500/</link>
+      <pubDate>Sun, 22 Jan 2017 07:14:41 +0000</pubDate>
+      
+      <guid>https://test.cfw4.tokyo/wordpress/500/</guid>
+      <description>もう古い話題なのだが、先日apacheからnginxに移行した。
+移行理由はwebサーバーを「let&amp;#8217;s note cf-w4 」から「DG-STK1B」に移行するにあたりnginx使うか！という安直な発想から。これでシングルコアpenMを卒業したことになる。ふむ。まだまだ使うけどw
+そこで、wordpressをいくつか持っているのでこれをnginxで動かすには.htaccessをnginxの設定に変換する必要がある。
+そこで以下の構成のwordpresを引っ越す必要があった。
+http://domain/
+に設置したWordpressと
+http://domain/blog/
+に設置したWordpressの構成
+つまり、マトリョーシカのように入れ子のようになっているわけだが、このnginxの設定が日本語でネット上で見つけれなかったので自分の設定を晒すことにする。&amp;#8221;wordpress nginx 入れ子&amp;#8221;で検索すると困っている人のブログが上位に出てくるので誰かの参考になればいいなと思います。
+nginx歴が2日なので、無駄設定が散見されるかもしれません。ご容赦ください。
+ポイントは環境に合わせてlocationをその都度一から書くということでしょうか。domainとblogの文字列は各自環境に変えてください。</description>
+    </item>
+    
+    <item>
+      <title>スティックPC、DG-STK1B でマイクラ鯖を立てた話</title>
+      <link>https://test.cfw4.tokyo/wordpress/296/</link>
+      <pubDate>Fri, 13 May 2016 04:04:36 +0000</pubDate>
+      
+      <guid>https://test.cfw4.tokyo/wordpress/296/</guid>
+      <description>これは維持費500円／年（電気代）でマイクラ鯖（バニラ）を立てる話です。
+ついにドスパラのスティックPCを買った。前から欲しかったのだが、躊躇してたのは三つ。archlinuxのインストール記事が少ないのと値段と用途がなかったからだ。昨年末から1万を切っており、マインクラフトのサーバーを立てたくなったので買った。つまりサーバー用途である。
+僕が買ったのは「Diginnos Stick DG-STK1B」である。後継機の「DG-STK3」を買おうと思ったのだが、スペックが対して変わらないのと、店頭で500円安かったのと、キーボードがついてきたからだ。
+後継機の方はプラスチックボディらしく、ファンレス金属ボディのほうが良かったと思う。軽量コンパクト化は熱がこもりやすいではないか、うん。と一人で納得した。ドスパラは在庫を無くしたいのだろうか。店頭で9,480円だった。今はもう少し安いかもしれない。
+そろそろ本題に入ろう。このPCにはwindows10がプリインストールされているが、USBに回復ドライブを作成したあとさくっと削除した。そしてサーバー運用のために以下の買い物をした。
+USB経由で有線ランつなげるやつ
+HDMIメスメスコネクタ
+コネクタは各自の環境に合わせるとして、内臓のwifiモジュールをlinuxが認識してくれないので、無理に苦労するぐらいならと思って買った。もっと安いのもあると思う。
+ということで、Linuxのインストールだが,幾つかのブログにお世話になった。だが、最終的に利用した環境だけのべておく。
+http://cdimage.debian.org/cdimage/unofficial/efi-development/jessie-upload3/
+で公開されているdebianインストールディスクだ。これを用いるだけで、32bitのUEFIの悪魔から逃れることができる。おそらく,32bitUEFI環境に64bitlinuxをインストールするのは技術的に難しくないのだが、ディストリビューションの思想的なことだったり、UEFIの仕様に従うと難しいようだ。だからパッケージマネージャー管理から外れた運用になってしまうのだが、それは使用し続けることで、サーバーを不安定にしてしまう。上記のurlによる環境はdebian開発者によるものなのでその辺に転がっている怪しいtips寄りは信用できる。一応、インストールできた環境を下にのせておく。
+32bit archlinux 安定に稼働する。但し、32bitカーネル
+64bit archlinux ハックすれば起動できる。でもする気が起きないほど面倒くさい。
+64bit ubuntu ハックすれば起動できる。面倒くさいし、aptが壊れて、不安定になってしまった。
+64bit debian 上記のISOで問題なくインストールできる。 Bay Trail-based machines と明確に書かれている。linuxカーネルにもパッチがあたっているらしい。debianなので頻繁なアップデートで壊れることもなさそう。GUIインストーラーで最小構成インストールできる。安定稼働。カーネルは3系。
+以上、DG-STK1Bに導入するlinuxの話でしたｗ
+マイクラ導入は癖なく普通のPC通りです。最大7人ぐらいで遊んでいますが、ネザーゲートくぐるときにラグが出るぐらいで他に不便なところはないです。MODいれるような余力はないです。バニラで遊びましょう。バニラで遊ぶにしてもspigotを導入したほうが使用感は軽くてトラブルが少ない印象です。</description>
+    </item>
+    
+    <item>
+      <title>PocketMine-MPでPEのバニラ鯖 (v0.13.2) を立てる。</title>
+      <link>https://test.cfw4.tokyo/wordpress/278/</link>
+      <pubDate>Tue, 09 Feb 2016 12:26:37 +0000</pubDate>
+      
+      <guid>https://test.cfw4.tokyo/wordpress/278/</guid>
+      <description>既出の話題かもしれないが、PEのクライアントがv0.13.2にバージョンアップしてから「サーバーが期限切れです」となってしまう。公式（と呼んでいいのかわからないけれど）のアナウンス通りサーバーを立ててもv0.13.1までしか対応していないようなので、PocketMine-MPのgithubから最新のソースを取ってきてインストールしたらいけるんじゃないかと思って試してみました。advanceでのインストールより不安定だと思ってください。
+お約束ですが、この記事の文責はなにわにありますが、仮にこの記事通りにしたがってコマンドを実行し、結果なにが起きても僕は一切の責任を取るつもりはありません。
+インストール方法は英文でここにあります。多分日本語ページがないからあんまり知られてないのかもしれない。詳しい各環境のインストール方法はリンク先をみてもらうこととして、linuxサーバーにインストールするなら以下のコマンドを実行してください。
+git clone https://github.com/PocketMine/PocketMine-MP.git&amp;lt;br /&amp;gt; cd PocketMine-MP/
+PHPのバイナリをインストールしてくだい。インストール出来ない人は期限切れになったPocketMine-MPのディレクトリの中のbinディレクトリをコピーしてください。それからいつもどおり立ち上げればいいはず。
+cp -r /期限切れのパス/bin .&amp;lt;br /&amp;gt; ./start.sh
+うまく行けば以下のログが吐き出されるはず。
+こんな感じのログが出ればおっけ～。 というわけで、しばらく「サーバーの期限切れです」で困っている人は試してみてください。</description>
+    </item>
+    
+    <item>
+      <title>Webで使えるターミナルを導入してみた！</title>
+      <link>https://test.cfw4.tokyo/wordpress/48/</link>
+      <pubDate>Wed, 02 Jul 2014 17:10:42 +0000</pubDate>
+      
+      <guid>https://test.cfw4.tokyo/wordpress/48/</guid>
+      <description>大学から自分のサーバーに接続しよう！うききー！
+あれ、接続できない！プロキシか！
+うんぬー。と思っていたら、webベースでターミナルぐらいあるんじゃないのか？と思い、ググってみたら、、、
+ありましたよ。
+しかも、若干２７歳のFlorian Mounierさんが単独で開発したっぽい。
+名前は、Butterflyってソフト。
+すげぇ。→ 本家
+しかも、sslで立ち上げも可能だそうで、ネットワーク越しに接続できるんじゃないかと。
+（本人のブログによると、安全じゃないからやめれとのこと。）
+とりあえず、面白そうなので導入してみた。
+githubもあるみたいだけれど、yaourtでいれる。archのyaourtコマンドは非公式だけど便利。でも、空気読めみたいなところがあってちょっと面白い。実装が中途半端だったりね。
+AURにはそのまんまの名前で登録されてた。
+$ yaourt -S butterfly
+それで、今回はなんか、設定がいるのかと思ったけど、すんなり入ったようで、
+# butterfly.server.py --unsecure
+のコマンドが通れば、localhost:57575で確認できる。
+ここで、sslの設定しなきゃと思ったんだけど、なんか全部やってくれるっぽい。
+フランスのひとすごい。
+とりあえず、&amp;#8211;unsecure　を外してコマンドを実行すれば、証明書つくんないとだめだよって怒られるので、怒られた通りに素直にコマンドを実行する。２つ実行したが忘れた。証明書を自動で作ってくれるので、リモートで使いたいパソコンに移しておく。
+オプションでipを指定できるので、家で使いたい人はルーターのローカルipを、リモートで使いたい人は0.0.0.0に設定する。
+この辺りは、本家のブログを読めばわかる。てゆーか、ほんとに使いやすい。
+そして、systemdでつかえる.serviceのファイルも用意してくれていた。最近はarch以外にもsystemdを使うディストリビューションが増えてきたらしく、なんか感動したね。rc.confが懐かしい。とかいいつつ、freebsdをいじるときには全然使うのだがw
+とかいいつつ、
+# systemctl enable butterfly
+# systemctl start butterfly
+を実行する。
+と、、ここで少しはまった。yaourtで入れてくれた/etc/systemd/system/butterfly.serviceのファイルにあるbutterfly.server.py　の実行行にオプションを入れたのがまずかったっぽい。ipをダブルクオーテーションで囲むと裏でエラーが人知れず吐かれるので、注意されたし。
+[bash]
+[Unit]
+Description=Butterfly Terminal Server
+After=network.target
+[Service]
+#ExecStart=/usr/bin/butterfly.server.py &amp;#8211;host=&amp;#8221;0.0.0.0&amp;#8243;
+ExecStart=/usr/bin/butterfly.server.py &amp;#8211;host=0.0.0.0
+Restart=on-abort
+[Install]
+WantedBy=multi-user.target
+[/bash]
+やった！
+
+これでリモートでサーバーにアクセスできるぜ！とおもったら、学内からアクセスできない。
+［追記］
+本日、学内からアクセスできました。原因はサービスを起動してなかったから。。。</description>
+    </item>
+    
+  </channel>
+</rss>

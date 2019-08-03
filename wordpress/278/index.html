@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>PocketMine-MPでPEのバニラ鯖 (v0.13.2) を立てる。 &middot; あんなことやこんなこと</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="あんなことやこんなこと" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">あんなことやこんなこと</h2>
+				</a>
+				<ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/">Posts</a></li>
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        naniwa
+        <br>
+        <span>on&nbsp;</span><time datetime="2016-02-09 12:26:37 &#43;0000 UTC">February 9, 2016</time>
+</div>
+		<h1 class="post-title">PocketMine-MPでPEのバニラ鯖 (v0.13.2) を立てる。</h1>
+<div class="post-line"></div>
+
+		
+
+		<p>既出の話題かもしれないが、PEのクライアントがv0.13.2にバージョンアップしてから「サーバーが期限切れです」となってしまう。<a href="http://www.pocketmine.net/">公式（と呼んでいいのかわからないけれど）</a>のアナウンス通りサーバーを立ててもv0.13.1までしか対応していないようなので、<a href="https://github.com/PocketMine/PocketMine-MP">PocketMine-MPのgithub</a>から最新のソースを取ってきてインストールしたらいけるんじゃないかと思って試してみました。advanceでのインストールより不安定だと思ってください。</p>
+
+<p><strong>お約束ですが、この記事の文責はなにわにありますが、仮にこの記事通りにしたがってコマンドを実行し、結果なにが起きても僕は一切の責任を取るつもりはありません。</strong></p>
+
+<p>インストール方法は英文で<a href="http://pocketmine-mp.readthedocs.org/en/latest/installation.html">ここ</a>にあります。多分日本語ページがないからあんまり知られてないのかもしれない。詳しい各環境のインストール方法はリンク先をみてもらうこととして、linuxサーバーにインストールするなら以下のコマンドを実行してください。</p>
+
+<p><code>git clone https://github.com/PocketMine/PocketMine-MP.git&lt;br /&gt;
+cd PocketMine-MP/</code></p>
+
+<p>PHPのバイナリをインストールしてくだい。インストール出来ない人は期限切れになったPocketMine-MPのディレクトリの中のbinディレクトリをコピーしてください。それからいつもどおり立ち上げればいいはず。</p>
+
+<p><code>cp -r /期限切れのパス/bin .&lt;br /&gt;
+./start.sh</code></p>
+
+<p>うまく行けば以下のログが吐き出されるはず。</p>
+
+<figure id="attachment_279" aria-describedby="caption-attachment-279" style="width: 909px" class="wp-caption aligncenter"><a href="http://cfw4.dip.jp/wordpress/wp-content/uploads/2016/02/2.png" rel="attachment wp-att-279"><img class="wp-image-279 size-full" src="http://cfw4.dip.jp/wordpress/wp-content/uploads/2016/02/2.png" alt="2" width="909" height="343" /></a><figcaption id="caption-attachment-279" class="wp-caption-text">こんな感じのログが出ればおっけ～。</figcaption></figure>
+
+<p>というわけで、しばらく「サーバーの期限切れです」で困っている人は試してみてください。</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/wordpress/274/" class="left arrow">&#8592;</a>
+		<a href="/wordpress/293/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2019-08-03 14:21:08.485025242 &#43;0000 UTC m=&#43;0.395738407">2019</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Webで使えるターミナルを導入してみた！ &middot; あんなことやこんなこと</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="あんなことやこんなこと" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">あんなことやこんなこと</h2>
+				</a>
+				<ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/">Posts</a></li>
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        naniwa
+        <br>
+        <span>on&nbsp;</span><time datetime="2014-07-02 17:10:42 &#43;0000 UTC">July 2, 2014</time>
+</div>
+		<h1 class="post-title">Webで使えるターミナルを導入してみた！</h1>
+<div class="post-line"></div>
+
+		
+
+		<p>大学から自分のサーバーに接続しよう！うききー！</p>
+
+<p>あれ、接続できない！プロキシか！</p>
+
+<p>うんぬー。と思っていたら、webベースでターミナルぐらいあるんじゃないのか？と思い、ググってみたら、、、</p>
+
+<p>ありましたよ。</p>
+
+<p>しかも、若干２７歳のFlorian Mounierさんが単独で開発したっぽい。</p>
+
+<p>名前は、Butterflyってソフト。</p>
+
+<p>すげぇ。→ <a href="http://paradoxxxzero.github.io/blog/">本家</a></p>
+
+<p>しかも、sslで立ち上げも可能だそうで、ネットワーク越しに接続できるんじゃないかと。</p>
+
+<p>（本人のブログによると、安全じゃないからやめれとのこと。）</p>
+
+<p>とりあえず、面白そうなので導入してみた。</p>
+
+<p>githubもあるみたいだけれど、yaourtでいれる。archのyaourtコマンドは非公式だけど便利。でも、空気読めみたいなところがあってちょっと面白い。実装が中途半端だったりね。</p>
+
+<p>AURにはそのまんまの名前で登録されてた。</p>
+
+<p><code>$ yaourt -S butterfly</code></p>
+
+<p>それで、今回はなんか、設定がいるのかと思ったけど、すんなり入ったようで、</p>
+
+<p><code># butterfly.server.py --unsecure</code></p>
+
+<p>のコマンドが通れば、<a href="http://localhost:57575">localhost:57575</a>で確認できる。</p>
+
+<p>ここで、sslの設定しなきゃと思ったんだけど、なんか全部やってくれるっぽい。</p>
+
+<p>フランスのひとすごい。</p>
+
+<p>とりあえず、&#8211;unsecure　を外してコマンドを実行すれば、証明書つくんないとだめだよって怒られるので、怒られた通りに素直にコマンドを実行する。２つ実行したが忘れた。証明書を自動で作ってくれるので、リモートで使いたいパソコンに移しておく。</p>
+
+<p>オプションでipを指定できるので、家で使いたい人はルーターのローカルipを、リモートで使いたい人は0.0.0.0に設定する。</p>
+
+<p>この辺りは、本家のブログを読めばわかる。てゆーか、ほんとに使いやすい。</p>
+
+<p>そして、systemdでつかえる.serviceのファイルも用意してくれていた。最近はarch以外にもsystemdを使うディストリビューションが増えてきたらしく、なんか感動したね。rc.confが懐かしい。とかいいつつ、freebsdをいじるときには全然使うのだがw</p>
+
+<p>とかいいつつ、</p>
+
+<p><code># systemctl enable butterfly</code></p>
+
+<p><code># systemctl start butterfly</code></p>
+
+<p>を実行する。</p>
+
+<p>と、、ここで少しはまった。yaourtで入れてくれた/etc/systemd/system/butterfly.serviceのファイルにあるbutterfly.server.py　の実行行にオプションを入れたのがまずかったっぽい。ipをダブルクオーテーションで囲むと裏でエラーが人知れず吐かれるので、注意されたし。</p>
+
+<p>[bash]</p>
+
+<p>[Unit]</p>
+
+<p>Description=Butterfly Terminal Server</p>
+
+<p>After=network.target</p>
+
+<p>[Service]</p>
+
+<p>#ExecStart=/usr/bin/butterfly.server.py &#8211;host=&#8221;0.0.0.0&#8243;</p>
+
+<p>ExecStart=/usr/bin/butterfly.server.py &#8211;host=0.0.0.0</p>
+
+<p>Restart=on-abort</p>
+
+<p>[Install]</p>
+
+<p>WantedBy=multi-user.target</p>
+
+<p>[/bash]</p>
+
+<p>やった！</p>
+
+<p><a href="http://cfw4.dip.jp/wordpress/wp-content/uploads/2014/07/名称未設定.png"><img class="alignnone size-full wp-image-49" src="http://cfw4.dip.jp/wordpress/wp-content/uploads/2014/07/名称未設定.png" alt="名称未設定" width="1417" height="1126" /></a></p>
+
+<p>これでリモートでサーバーにアクセスできるぜ！とおもったら、学内からアクセスできない。</p>
+
+<p>［追記］</p>
+
+<p>本日、学内からアクセスできました。原因はサービスを起動してなかったから。。。</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/wordpress/39/" class="left arrow">&#8592;</a>
+		<a href="/wordpress/58/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2019-08-03 14:21:08.50851099 &#43;0000 UTC m=&#43;0.419224071">2019</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

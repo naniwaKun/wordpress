@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>読み上げアプリ作ったので公開する。 &middot; あんなことやこんなこと</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="あんなことやこんなこと" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">あんなことやこんなこと</h2>
+				</a>
+				<ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/">Posts</a></li>
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        naniwa
+        <br>
+        <span>on&nbsp;</span><time datetime="2016-03-20 11:31:32 &#43;0000 UTC">March 20, 2016</time>
+</div>
+		<h1 class="post-title">読み上げアプリ作ったので公開する。</h1>
+<div class="post-line"></div>
+
+		
+
+		
+
+<p>しょぼい読み上げアプリを作ったのでテンションで公開しようと思う。クリップボードを0.1秒間隔で監視して読み上げるアプリケーションです。棒読みちゃんの設定がややこしいので完全に自分向け。僕はツイキャスの読み上げに使ってます。</p>
+
+<p>動作確認環境は、64bit windows10 だけど、たぶん最新のjavaの環境とクリップボードがあれば動くと思う（未確認）。興味のある人は勝手に使ってくださいという気分です。</p>
+
+<p>また、このアプリケーションは個人が趣味の範囲（いかなる事業, 営利活動とも無関係）で書いたものです。</p>
+
+<p><a href="http://www.cfw4.tk/wordpress/wp-content/uploads/2016/03/yomiyomi.zip" rel="">よみよみちゃん</a></p>
+
+<h3 id="はじめに"><strong>はじめに</strong></h3>
+
+<p>本アプリケーションは、<a href="https://cloud.voicetext.jp/webapi" target="_blank" rel="noopener noreferrer">VoiceText Web API</a> に通信して音声を取得、再生するアプリです。記事公開時は個人利用は無料ですが、音声の二次利用は制限されています。また、VoiceText Web API の規約は変更することも予想されます。本アプリケーションは”VoiceText Web API”の規約違反を助長する意図で公開したものではないと宣言しておきます。</p>
+
+<p>また、本アプリケーションを使用したことで不利益を被っても利用者の責任であるものとします。開発者である私は一切の責任を負いません。</p>
+
+<p>また、開発されたコードには、<a href="https://github.com/making/voicetext4j/" target="_blank" rel="noopener noreferrer">voicetext4j</a>で公開されているコードが含まれています。</p>
+
+<h3 id="インストールの前に"><strong>インストールの前に</strong></h3>
+
+<p>VoiceText Web API の登録とjava(jre)のインストールをしておくこと。</p>
+
+<h3 id="インストール"><strong>インストール</strong></h3>
+
+<p>よみよみちゃんをダウンロードして展開して好きなところに設置してください。そして、VoiceText Web API を登録して得られたAPIキーをkey.txtに書き込んでください。また、java(jre)をインストールしておいてください。以上でインストールは終了です。</p>
+
+<h3 id="使い方"><strong>使い方</strong></h3>
+
+<p>yomiyomi.exeを起動(通常はダブルクリック)してください。ウィンドウの&#8221;Start&#8221;ボタンでクリップボードの読み上げを開始し、”End”ボタンでアプリケーションを終了します。</p>
+
+<figure id="attachment_309" aria-describedby="caption-attachment-309" style="width: 303px" class="wp-caption aligncenter"><a href="http://www.cfw4.tk/wordpress/wp-content/uploads/2016/03/無_題.png" rel="attachment wp-att-309"><img class="size-full wp-image-309" src="http://www.cfw4.tk/wordpress/wp-content/uploads/2016/03/無_題.png" alt="起動画面" width="303" height="83" /></a><figcaption id="caption-attachment-309" class="wp-caption-text">起動画面</figcaption></figure>
+
+<h3 id="ライセンス"><strong>ライセンス</strong></h3>
+
+<p>ライセンスは「Apache License, Version 2.0.」とします。近々ソースコードを公開する予定です。</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/wordpress/293/" class="left arrow">&#8592;</a>
+		<a href="/wordpress/316/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2019-08-03 14:21:08.483486647 &#43;0000 UTC m=&#43;0.394199740">2019</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

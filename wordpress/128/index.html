@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>skypeで使えるコマンドまとめ &middot; あんなことやこんなこと</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="あんなことやこんなこと" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">あんなことやこんなこと</h2>
+				</a>
+				<ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/">Posts</a></li>
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        naniwa
+        <br>
+        <span>on&nbsp;</span><time datetime="2014-11-17 02:01:41 &#43;0000 UTC">November 17, 2014</time>
+</div>
+		<h1 class="post-title">skypeで使えるコマンドまとめ</h1>
+<div class="post-line"></div>
+
+		
+
+		<p>最近さしぶりにskypeをしていたらp2pベースからクラウドベースに変わったこともあり、コマンドが変わっていた(というか減った？)ので、忘備録をまとめることにした。</p>
+
+<p>/add とか /kick とかのあれですね。もっとバリエーションがあるので知っておいたほうがいいです。</p>
+
+<p>僕は、いわゆるskypeチャンネルとかで募集をかけてホストで会議なんかをやってたりするので知っておくとネットの大海原から身を守れますｗでもややこしいよね。初心者でも、”こういうことができる”っていうことを知ってるだけで違うかもしれません。スマホからも使えるし。僕はガラケーなんだけど。</p>
+
+<p><a href="https://support.skype.com/ja/faq/FA10042/">コマンド詳細のページ</a></p>
+
+<p>トピックごとに分けましょう。ちゃんと知りたい人は公式へ。</p>
+
+<ul>
+<li>adminは増やせる</li>
+</ul>
+
+<p>これは知らない人をグループチャットに追加した時、追い出したいって思ってもホストがいないどうしようってなるのを事前に防ぐやつです。adminは削除できる権限もあるので、ホストが出かけたい時とかいいですねｗ</p>
+
+<p><code>/setrole -Skype名- ADMIN</code></p>
+
+<p>USER権限に戻すときは、</p>
+
+<p><code>/setrole -Skype名- USER</code></p>
+
+<ul>
+<li>グループチャットに新規追加できなくする</li>
+</ul>
+
+<p>これは、ちょっと怪しめな人から会議参加のリクエストが来て、会議に参加した後にホストがこっそり設定します。便利。</p>
+
+<p><code>/set options -JOINING_ENABLED</code></p>
+
+<p>参加できる状態に戻すときは、</p>
+
+<p><code>/set options +JOINING_ENABLED</code></p>
+
+<ul>
+<li>グループチャットの参加者状況を確認する</li>
+</ul>
+
+<p>これで通話しながら確認できます。skypeIDをコピペするのはこれで楽になりますね。</p>
+
+<p><code>/showmembers</code></p>
+
+<p>skypeのコマンドが減っているようでこんな程度しかできなくなっていました。また、よく言われることですが、”ip抜くよ”っていう人は大したことありません。また、ipを絶対に隠してネットしようと考えるのも危険です。例えば、webサイトを閲覧すればIPアドレスはlogに残るからです。ですから、大体どの辺に済んでて、どのプロバイダを使っているかという情報は結構丸見えです。ですが、例えば、大学でどんな勉強をしてるとか、そういう断片的な情報を合わせればわかってしまう時があります。</p>
+
+<p>ですから、市町村レベルでだいたいどの辺にいるかは知られてると思ってしゃべりましょう。会社まで歩いてすぐとか言うとアウトかもしれませんよ。</p>
+
+<p>あと、skypeでDOS打たれて嫌な経験がある人はSkypeの接続ポート番号を変えてみてください。また、ルーターの設定を変更した方がいいです。</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/wordpress/125/" class="left arrow">&#8592;</a>
+		<a href="/wordpress/132/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2019-08-03 14:21:08.49448018 &#43;0000 UTC m=&#43;0.405193273">2019</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

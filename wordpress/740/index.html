@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>32bitUEFIのスティックPCのdebian（64bit）を8から9にアップグレードした話 &middot; あんなことやこんなこと</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="あんなことやこんなこと" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">あんなことやこんなこと</h2>
+				</a>
+				<ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/">Posts</a></li>
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        naniwa
+        <br>
+        <span>on&nbsp;</span><time datetime="2017-09-17 21:20:02 &#43;0000 UTC">September 17, 2017</time>
+</div>
+		<h1 class="post-title">32bitUEFIのスティックPCのdebian（64bit）を8から9にアップグレードした話</h1>
+<div class="post-line"></div>
+
+		
+
+		<p><a href="http://www.cfw4.tk/wordpress/296">スティックPC、DG-STK1B でマイクラ鯖を立てた話</a></p>
+
+<p>この記事の続き。</p>
+
+<p>前回は32bitUEFI環境に64bitlinuxをインストールするに当たって、以下のOSイメージを使えば一発ですよ。という話をした。<figure class="wp-block-embed"></p>
+
+<p><div class="wp-block-embed__wrapper">
+  <a href="http://cdimage.debian.org/cdimage/unofficial/efi-development/jessie-upload3/">http://cdimage.debian.org/cdimage/unofficial/efi-development/jessie-upload3/</a>
+</div></figure></p>
+
+<p>同じ状況の方がアップグレードするための話</p>
+
+<p>前回の記事に結構アクセスが来ていて、反応を見ていると楽しかった。スティックPCでWindowsが重くてアップデートできなくなった難民の方や、子供ために固定費を浮かせてマイクラ鯖立てるお父さんとかｗ<br />
+32bitでインストールするのは簡単だけど、ちょうど移行の時期で、64bitじゃないとパフォーマンスが出ないソフトが結構あった。javaのヒープとかね。だからみんなの目に止まったんだと思う。</p>
+
+<p>それから時間は過ぎて、debianのアップデートがきた。debianは結構お硬いイメージのディストリビューションで、パッケージがもろ古いので、早くアップデートしたくて、debianの&#8221;unofficial&#8221;なパッケージを監視していたが、アナウンスがない。重い腰を上げて調べてみると、stretch(9)では、公式に対応したそうだ。</p>
+
+<p>なので、この状態のままアップグレードを強行することにした。</p>
+
+<p>以下の手順を参照されたい。</p>
+
+<p>無事に再起動できた。</p>
+
+<p>最近はマイクラに飽きてきて、たまにしかサーバーを起動しなくなった。その代わりにwebで使えるIDEをインストールしたので今度はその話をしようかな。</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/wordpress/723/" class="left arrow">&#8592;</a>
+		<a href="/wordpress/750/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2019-08-03 14:21:08.368720886 &#43;0000 UTC m=&#43;0.279433967">2019</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>サーバー記録 on あんなことやこんなこと</title>
-    <link>https://test.cfw4.tokyo/categories/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E8%A8%98%E9%8C%B2/</link>
+    <link>https://naniwakun.github.io/categories/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E8%A8%98%E9%8C%B2/</link>
     <description>Recent content in サーバー記録 on あんなことやこんなこと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 17 Sep 2017 21:20:02 +0000</lastBuildDate>
     
-	<atom:link href="https://test.cfw4.tokyo/categories/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E8%A8%98%E9%8C%B2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://naniwakun.github.io/categories/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E8%A8%98%E9%8C%B2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>32bitUEFIのスティックPCのdebian（64bit）を8から9にアップグレードした話</title>
-      <link>https://test.cfw4.tokyo/wordpress/740/</link>
+      <link>https://naniwakun.github.io/wordpress/740/</link>
       <pubDate>Sun, 17 Sep 2017 21:20:02 +0000</pubDate>
       
-      <guid>https://test.cfw4.tokyo/wordpress/740/</guid>
+      <guid>https://naniwakun.github.io/wordpress/740/</guid>
       <description>スティックPC、DG-STK1B でマイクラ鯖を立てた話
 この記事の続き。
 前回は32bitUEFI環境に64bitlinuxをインストールするに当たって、以下のOSイメージを使えば一発ですよ。という話をした。http://cdimage.debian.org/cdimage/unofficial/efi-development/jessie-upload3/ 
@@ -32,10 +32,10 @@
     
     <item>
       <title>wordpress 4.7.0 4.7.1 の脆弱性に関して</title>
-      <link>https://test.cfw4.tokyo/wordpress/433/</link>
+      <link>https://naniwakun.github.io/wordpress/433/</link>
       <pubDate>Wed, 08 Feb 2017 01:40:36 +0000</pubDate>
       
-      <guid>https://test.cfw4.tokyo/wordpress/433/</guid>
+      <guid>https://naniwakun.github.io/wordpress/433/</guid>
       <description>すでに公開・公表されている脆弱性に関してです。
 日本メディアに関しては以下にアナウンスされています。
 https://www.ipa.go.jp/security/ciadr/vul/20170206-wordpress.html
@@ -50,10 +50,10 @@ rubyコードだけど、WebAPIを叩ければ誰でも単純に実行できま�
     
     <item>
       <title>apacheからnginxへ移行した話</title>
-      <link>https://test.cfw4.tokyo/wordpress/500/</link>
+      <link>https://naniwakun.github.io/wordpress/500/</link>
       <pubDate>Sun, 22 Jan 2017 07:14:41 +0000</pubDate>
       
-      <guid>https://test.cfw4.tokyo/wordpress/500/</guid>
+      <guid>https://naniwakun.github.io/wordpress/500/</guid>
       <description>もう古い話題なのだが、先日apacheからnginxに移行した。
 移行理由はwebサーバーを「let&amp;#8217;s note cf-w4 」から「DG-STK1B」に移行するにあたりnginx使うか！という安直な発想から。これでシングルコアpenMを卒業したことになる。ふむ。まだまだ使うけどw
 そこで、wordpressをいくつか持っているのでこれをnginxで動かすには.htaccessをnginxの設定に変換する必要がある。
@@ -69,10 +69,10 @@ nginx歴が2日なので、無駄設定が散見されるかもしれません�
     
     <item>
       <title>スティックPC、DG-STK1B でマイクラ鯖を立てた話</title>
-      <link>https://test.cfw4.tokyo/wordpress/296/</link>
+      <link>https://naniwakun.github.io/wordpress/296/</link>
       <pubDate>Fri, 13 May 2016 04:04:36 +0000</pubDate>
       
-      <guid>https://test.cfw4.tokyo/wordpress/296/</guid>
+      <guid>https://naniwakun.github.io/wordpress/296/</guid>
       <description>これは維持費500円／年（電気代）でマイクラ鯖（バニラ）を立てる話です。
 ついにドスパラのスティックPCを買った。前から欲しかったのだが、躊躇してたのは三つ。archlinuxのインストール記事が少ないのと値段と用途がなかったからだ。昨年末から1万を切っており、マインクラフトのサーバーを立てたくなったので買った。つまりサーバー用途である。
 僕が買ったのは「Diginnos Stick DG-STK1B」である。後継機の「DG-STK3」を買おうと思ったのだが、スペックが対して変わらないのと、店頭で500円安かったのと、キーボードがついてきたからだ。
@@ -94,10 +94,10 @@ http://cdimage.debian.org/cdimage/unofficial/efi-development/jessie-upload3/
     
     <item>
       <title>PocketMine-MPでPEのバニラ鯖 (v0.13.2) を立てる。</title>
-      <link>https://test.cfw4.tokyo/wordpress/278/</link>
+      <link>https://naniwakun.github.io/wordpress/278/</link>
       <pubDate>Tue, 09 Feb 2016 12:26:37 +0000</pubDate>
       
-      <guid>https://test.cfw4.tokyo/wordpress/278/</guid>
+      <guid>https://naniwakun.github.io/wordpress/278/</guid>
       <description>既出の話題かもしれないが、PEのクライアントがv0.13.2にバージョンアップしてから「サーバーが期限切れです」となってしまう。公式（と呼んでいいのかわからないけれど）のアナウンス通りサーバーを立ててもv0.13.1までしか対応していないようなので、PocketMine-MPのgithubから最新のソースを取ってきてインストールしたらいけるんじゃないかと思って試してみました。advanceでのインストールより不安定だと思ってください。
 お約束ですが、この記事の文責はなにわにありますが、仮にこの記事通りにしたがってコマンドを実行し、結果なにが起きても僕は一切の責任を取るつもりはありません。
 インストール方法は英文でここにあります。多分日本語ページがないからあんまり知られてないのかもしれない。詳しい各環境のインストール方法はリンク先をみてもらうこととして、linuxサーバーにインストールするなら以下のコマンドを実行してください。
@@ -110,10 +110,10 @@ cp -r /期限切れのパス/bin .&amp;lt;br /&amp;gt; ./start.sh
     
     <item>
       <title>Webで使えるターミナルを導入してみた！</title>
-      <link>https://test.cfw4.tokyo/wordpress/48/</link>
+      <link>https://naniwakun.github.io/wordpress/48/</link>
       <pubDate>Wed, 02 Jul 2014 17:10:42 +0000</pubDate>
       
-      <guid>https://test.cfw4.tokyo/wordpress/48/</guid>
+      <guid>https://naniwakun.github.io/wordpress/48/</guid>
       <description>大学から自分のサーバーに接続しよう！うききー！
 あれ、接続できない！プロキシか！
 うんぬー。と思っていたら、webベースでターミナルぐらいあるんじゃないのか？と思い、ググってみたら、、、

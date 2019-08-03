@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>apacheからnginxへ移行した話 &middot; あんなことやこんなこと</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="あんなことやこんなこと" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">あんなことやこんなこと</h2>
+				</a>
+				<ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/">Posts</a></li>
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        naniwa
+        <br>
+        <span>on&nbsp;</span><time datetime="2017-01-22 07:14:41 &#43;0000 UTC">January 22, 2017</time>
+</div>
+		<h1 class="post-title">apacheからnginxへ移行した話</h1>
+<div class="post-line"></div>
+
+		
+
+		<p>もう古い話題なのだが、先日apacheからnginxに移行した。</p>
+
+<p>移行理由はwebサーバーを「<a href="http://panasonic.jp/pc/p-db/CF-W4GW9AXR.html">let&#8217;s note cf-w4</a> 」から「<a href="https://www.amazon.co.jp/Diginnos-Stick-DG-STK1B-%E3%82%B9%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E5%9E%8B%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3-Windows/dp/B015XU925A">DG-STK1B</a>」に移行するにあたりnginx使うか！という安直な発想から。これでシングルコアpenMを卒業したことになる。ふむ。まだまだ使うけどw</p>
+
+<p>そこで、wordpressをいくつか持っているのでこれをnginxで動かすには.htaccessをnginxの設定に変換する必要がある。</p>
+
+<p>そこで以下の構成のwordpresを引っ越す必要があった。</p>
+
+<p><a href="http://domain/">http://domain/</a></p>
+
+<p>に設置したWordpressと</p>
+
+<p><a href="http://domain/blog/">http://domain/blog/</a></p>
+
+<p>に設置したWordpressの構成</p>
+
+<p>つまり、マトリョーシカのように入れ子のようになっているわけだが、このnginxの設定が日本語でネット上で見つけれなかったので自分の設定を晒すことにする。&#8221;wordpress nginx 入れ子&#8221;で検索すると困っている人のブログが上位に出てくるので誰かの参考になればいいなと思います。</p>
+
+<p>nginx歴が2日なので、無駄設定が散見されるかもしれません。ご容赦ください。</p>
+
+<p>ポイントは環境に合わせてlocationをその都度一から書くということでしょうか。domainとblogの文字列は各自環境に変えてください。</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/wordpress/389/" class="left arrow">&#8592;</a>
+		<a href="/wordpress/425/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2019-08-03 14:21:08.404327463 &#43;0000 UTC m=&#43;0.315040616">2019</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

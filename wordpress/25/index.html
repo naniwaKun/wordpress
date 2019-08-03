@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>PDFの編集 : 動かないコマンド &middot; あんなことやこんなこと</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="あんなことやこんなこと" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">あんなことやこんなこと</h2>
+				</a>
+				<ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/">Posts</a></li>
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        naniwa
+        <br>
+        <span>on&nbsp;</span><time datetime="2014-06-28 01:13:43 &#43;0000 UTC">June 28, 2014</time>
+</div>
+		<h1 class="post-title">PDFの編集 : 動かないコマンド</h1>
+<div class="post-line"></div>
+
+		
+
+		<p>pdfの編集についての覚書</p>
+
+<p>動機としては毎月買ってる雑誌があるのだが、一定量が溜まってくると捨ててしまう。勿体無いので自炊してpdf化しておきたい。あと本棚が限界。</p>
+
+<p>有名なコマンドはpdftkだ。</p>
+
+<p>ただ、pdfの規格というか、仕組みには明るくないのだが、画像のみのpdfの場合、pdfからの画像抽出が難しい。</p>
+
+<p>というか、pdftkだったら無理だった。</p>
+
+<p>「スキャナで取得したイメージをそのままPDF化したものや、画像ソフトによって作成されたPDFではテキスト情報がPDF内に保存されていないため、直接抽出することは出来ない。」<a href="http://www.takamagahara.info/2009/0121">引用元</a></p>
+
+<p>とくに、雑誌のデータを画像データとしてではなく、スキャナから直接pdfに書き出していたので、そこではまった。</p>
+
+<p>pdfの編集には、前段階として、画像データで編集を行い、pdfにまとめれば良い。</p>
+
+<p>すると、pdf関連のコマンドはスッキリして便利だ。</p>
+
+<p>画像の回転などはimagemagickなどを使う。</p>
+
+<p>ちなみにMacユーザーなら以下のコマンドが使える。とりあえず、Mavericksでも生きてた。</p>
+
+<p>/usr/libexec/fax/imagestopdf</p>
+
+<p>パスを通すのとか面倒だし、滅多に使わないならそのまま使えばいいと思う。例えば、画像データを昇順でソートしておけば、ワイルドカードを使って書き出せる。</p>
+
+<p><code>/usr/libexec/fax/imagestopdf *.jpg out.pdf</code></p>
+
+<p>ちなみに、archlinuxユーザーの方はpdftkを使うしかないのだが、</p>
+
+<p><code>yaourt -S pdftk</code></p>
+
+<p>よりも、</p>
+
+<p><code>yaourt -S pdftk-bin</code></p>
+
+<p>の方を使えば、余計なビルドしなくて済みます。そんなにかからないだろうと思ってビルドすると永遠かかります。なんか、バージョン違いのGCCのビルドを始めたりする。</p>
+
+<p>ちなみに抽出できなかったPDFの画像は、pdfをonedriveで.docxに変換してunzipして取り出した。</p>
+
+<p>なんてバットノウハウ！</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/wordpress/12/" class="left arrow">&#8592;</a>
+		<a href="/wordpress/39/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2019-08-03 14:21:08.511779267 &#43;0000 UTC m=&#43;0.422492432">2019</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

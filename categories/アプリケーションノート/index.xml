@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>アプリケーションノート on あんなことやこんなこと</title>
+    <link>https://test.cfw4.tokyo/categories/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%8E%E3%83%BC%E3%83%88/</link>
+    <description>Recent content in アプリケーションノート on あんなことやこんなこと</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 20 Mar 2016 11:31:32 +0000</lastBuildDate>
+    
+	<atom:link href="https://test.cfw4.tokyo/categories/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%8E%E3%83%BC%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>読み上げアプリ作ったので公開する。</title>
+      <link>https://test.cfw4.tokyo/wordpress/301/</link>
+      <pubDate>Sun, 20 Mar 2016 11:31:32 +0000</pubDate>
+      
+      <guid>https://test.cfw4.tokyo/wordpress/301/</guid>
+      <description>しょぼい読み上げアプリを作ったのでテンションで公開しようと思う。クリップボードを0.1秒間隔で監視して読み上げるアプリケーションです。棒読みちゃんの設定がややこしいので完全に自分向け。僕はツイキャスの読み上げに使ってます。
+動作確認環境は、64bit windows10 だけど、たぶん最新のjavaの環境とクリップボードがあれば動くと思う（未確認）。興味のある人は勝手に使ってくださいという気分です。
+また、このアプリケーションは個人が趣味の範囲（いかなる事業, 営利活動とも無関係）で書いたものです。
+よみよみちゃん
+はじめに 本アプリケーションは、VoiceText Web API に通信して音声を取得、再生するアプリです。記事公開時は個人利用は無料ですが、音声の二次利用は制限されています。また、VoiceText Web API の規約は変更することも予想されます。本アプリケーションは”VoiceText Web API”の規約違反を助長する意図で公開したものではないと宣言しておきます。
+また、本アプリケーションを使用したことで不利益を被っても利用者の責任であるものとします。開発者である私は一切の責任を負いません。
+また、開発されたコードには、voicetext4jで公開されているコードが含まれています。
+インストールの前に VoiceText Web API の登録とjava(jre)のインストールをしておくこと。
+インストール よみよみちゃんをダウンロードして展開して好きなところに設置してください。そして、VoiceText Web API を登録して得られたAPIキーをkey.txtに書き込んでください。また、java(jre)をインストールしておいてください。以上でインストールは終了です。
+使い方 yomiyomi.exeを起動(通常はダブルクリック)してください。ウィンドウの&amp;#8221;Start&amp;#8221;ボタンでクリップボードの読み上げを開始し、”End”ボタンでアプリケーションを終了します。
+起動画面 ライセンス ライセンスは「Apache License, Version 2.0.」とします。近々ソースコードを公開する予定です。</description>
+    </item>
+    
+    <item>
+      <title>podTerm : Podcastはterminalで聞こう！</title>
+      <link>https://test.cfw4.tokyo/wordpress/158/</link>
+      <pubDate>Tue, 17 Feb 2015 07:55:02 +0000</pubDate>
+      
+      <guid>https://test.cfw4.tokyo/wordpress/158/</guid>
+      <description>皆さん、podcastをどうやって聞いてますでしょうか？iTunes?, iphone?, android?
+僕はガラケーユーザーだし、ノートパソコンは研究で使うからあんまり汚したくない。かと言って家のWindowsに iTunes を入れるのは嫌だ。でも、Podcast聞く時って作業中とかだしな。RSSのURLだけあれば、いいんだよなー。って考えてるうちに作っちゃいました。
+一応、terminalからpodcastのエピソードをダウンロードするソフトならあったんだけど、ダウンロードする必要ある？
+ってことで作っちゃいました！Rubyのシンプルなやつです。perlで書こうとしたら長くなっちゃうので、初めてのRubyでした。生産性はあがってるんですねぇ。5年前に触った時は全然好きになれなかったけれど。しかし、初めてgithubのアカウントとったぜ。。
+興味ある方はこちら。ブラウザを開かずにpodcastを聞けるので仕事に集中できます。まだ全然作りが荒いんだけど、これから更新したかチェックできるようにしたいな。再生済みでマークできたりしたらいいよね。
+使ってみたらこんな感じ。
+http://cfw4.dip.jp/wordpress/wp-content/uploads/2015/02/000.mp4  [追記]
+使用感を多少改善してAURにPKGBUILDをポストしました。
+archlinuxユーザーならワンライナーでインストールできます。
+`$ yaourt -S podterm-git`</description>
+    </item>
+    
+  </channel>
+</rss>

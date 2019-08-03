@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>便利コマンド on あんなことやこんなこと</title>
+    <link>https://test.cfw4.tokyo/categories/%E4%BE%BF%E5%88%A9%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</link>
+    <description>Recent content in 便利コマンド on あんなことやこんなこと</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 17 Nov 2014 02:01:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://test.cfw4.tokyo/categories/%E4%BE%BF%E5%88%A9%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>skypeで使えるコマンドまとめ</title>
+      <link>https://test.cfw4.tokyo/wordpress/128/</link>
+      <pubDate>Mon, 17 Nov 2014 02:01:41 +0000</pubDate>
+      
+      <guid>https://test.cfw4.tokyo/wordpress/128/</guid>
+      <description>最近さしぶりにskypeをしていたらp2pベースからクラウドベースに変わったこともあり、コマンドが変わっていた(というか減った？)ので、忘備録をまとめることにした。
+/add とか /kick とかのあれですね。もっとバリエーションがあるので知っておいたほうがいいです。
+僕は、いわゆるskypeチャンネルとかで募集をかけてホストで会議なんかをやってたりするので知っておくとネットの大海原から身を守れますｗでもややこしいよね。初心者でも、”こういうことができる”っていうことを知ってるだけで違うかもしれません。スマホからも使えるし。僕はガラケーなんだけど。
+コマンド詳細のページ
+トピックごとに分けましょう。ちゃんと知りたい人は公式へ。
+ adminは増やせる  これは知らない人をグループチャットに追加した時、追い出したいって思ってもホストがいないどうしようってなるのを事前に防ぐやつです。adminは削除できる権限もあるので、ホストが出かけたい時とかいいですねｗ
+/setrole -Skype名- ADMIN
+USER権限に戻すときは、
+/setrole -Skype名- USER
+ グループチャットに新規追加できなくする  これは、ちょっと怪しめな人から会議参加のリクエストが来て、会議に参加した後にホストがこっそり設定します。便利。
+/set options -JOINING_ENABLED
+参加できる状態に戻すときは、
+/set options +JOINING_ENABLED
+ グループチャットの参加者状況を確認する  これで通話しながら確認できます。skypeIDをコピペするのはこれで楽になりますね。
+/showmembers
+skypeのコマンドが減っているようでこんな程度しかできなくなっていました。また、よく言われることですが、”ip抜くよ”っていう人は大したことありません。また、ipを絶対に隠してネットしようと考えるのも危険です。例えば、webサイトを閲覧すればIPアドレスはlogに残るからです。ですから、大体どの辺に済んでて、どのプロバイダを使っているかという情報は結構丸見えです。ですが、例えば、大学でどんな勉強をしてるとか、そういう断片的な情報を合わせればわかってしまう時があります。
+ですから、市町村レベルでだいたいどの辺にいるかは知られてると思ってしゃべりましょう。会社まで歩いてすぐとか言うとアウトかもしれませんよ。
+あと、skypeでDOS打たれて嫌な経験がある人はSkypeの接続ポート番号を変えてみてください。また、ルーターの設定を変更した方がいいです。</description>
+    </item>
+    
+    <item>
+      <title>中間発表のやり方</title>
+      <link>https://test.cfw4.tokyo/wordpress/56/</link>
+      <pubDate>Sun, 13 Jul 2014 08:56:34 +0000</pubDate>
+      
+      <guid>https://test.cfw4.tokyo/wordpress/56/</guid>
+      <description>さて、昨日中間発表が終わりました。
+しんどかったー。
+今回からlatexのコマンドをplatexからlualatexに変えました。
+あ、あと、ポイントとしては、プレゼンソフトの対応でしょうか、以下忘備録としてまとめ。
+mactex(texlive)のインストール
+基本的に公式に従う。だけど、MacPortから入れようとしたら、インストールは出来るんだけど、tlmgrのコマンドが見つからなかったので、おとなしく.pkgからインストールした。いつも思うことだけど、rikenのサーバーが早いです。
+linuxユーザーはtexliveを入れてください。大体のディストリビューションでもワンライナーで入ると思います。
+これで、lualatexのコマンドが通る。が、
+以下のコマンドを実行しておくこと
+$ sudo tlmgr update --self --all
+これで最新版にアップデートしてくれるっぽい。
+ちなみに、lualatexやxelatexはここ最近できたコマンドで、一気にpdfを作ってくれます。インストールやだって方はShareLatexを使おう。今は日本語に対応しています。バックアップにもなるしね。実はsharelatex自体もオープンソースgithubなのでサーバーに入れいたい方はどうぞ。こんなところでもrailsが使われててびっくり。
+これで、環境が整ったので、vimかなんかでスライドを作成する。自分のテンプレートは以下のとおり。
+内容は各セクションで\input{}で指定されてるファイルに書き込む。
+これで、pdfはできるのだが、PDFでプレゼンって難しいよね。そこで、以下のコマンドを実行。(imagemagick必須)
+convert -density 300 tex.pdf slide.jpg
+これで、すべてのスライドを画像に変換してくれる。-densityオプションで解像度を指定できる。コマンド例はdpi単位で指定してる。画像をパワポなり、リブレなりに投げれば発表者ツールが使える。
+これでプレゼンできるね！</description>
+    </item>
+    
+    <item>
+      <title>PDFの編集 : 動かないコマンド</title>
+      <link>https://test.cfw4.tokyo/wordpress/25/</link>
+      <pubDate>Sat, 28 Jun 2014 01:13:43 +0000</pubDate>
+      
+      <guid>https://test.cfw4.tokyo/wordpress/25/</guid>
+      <description>pdfの編集についての覚書
+動機としては毎月買ってる雑誌があるのだが、一定量が溜まってくると捨ててしまう。勿体無いので自炊してpdf化しておきたい。あと本棚が限界。
+有名なコマンドはpdftkだ。
+ただ、pdfの規格というか、仕組みには明るくないのだが、画像のみのpdfの場合、pdfからの画像抽出が難しい。
+というか、pdftkだったら無理だった。
+「スキャナで取得したイメージをそのままPDF化したものや、画像ソフトによって作成されたPDFではテキスト情報がPDF内に保存されていないため、直接抽出することは出来ない。」引用元
+とくに、雑誌のデータを画像データとしてではなく、スキャナから直接pdfに書き出していたので、そこではまった。
+pdfの編集には、前段階として、画像データで編集を行い、pdfにまとめれば良い。
+すると、pdf関連のコマンドはスッキリして便利だ。
+画像の回転などはimagemagickなどを使う。
+ちなみにMacユーザーなら以下のコマンドが使える。とりあえず、Mavericksでも生きてた。
+/usr/libexec/fax/imagestopdf
+パスを通すのとか面倒だし、滅多に使わないならそのまま使えばいいと思う。例えば、画像データを昇順でソートしておけば、ワイルドカードを使って書き出せる。
+/usr/libexec/fax/imagestopdf *.jpg out.pdf
+ちなみに、archlinuxユーザーの方はpdftkを使うしかないのだが、
+yaourt -S pdftk
+よりも、
+yaourt -S pdftk-bin
+の方を使えば、余計なビルドしなくて済みます。そんなにかからないだろうと思ってビルドすると永遠かかります。なんか、バージョン違いのGCCのビルドを始めたりする。
+ちなみに抽出できなかったPDFの画像は、pdfをonedriveで.docxに変換してunzipして取り出した。
+なんてバットノウハウ！</description>
+    </item>
+    
+  </channel>
+</rss>

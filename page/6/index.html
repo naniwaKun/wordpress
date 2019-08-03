@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+	<meta name="generator" content="Hugo 0.55.6" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta name="description" content="">
+
+		<title>あんなことやこんなこと</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="/index.xml" rel="alternate" type="application/rss+xml" title="あんなことやこんなこと" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">あんなことやこんなこと</h2>
+				</a>
+				<ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/">Posts</a></li>
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	
+
+
+	<div class="catalogue">
+		
+			<a href="https://test.cfw4.tokyo/wordpress/71/" class="catalogue-item">
+    <div>
+        <time datetime="2014-07-31 11:29:21 &#43;0000 UTC" class="catalogue-time">July 31, 2014</time>
+        <h1 class="catalogue-title">OSの選び方</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            今回の議題です。
+「linuxってどれを使えばいいですか？」と後輩に聞かれましたので、blogにまとめます。と答えましたｗ
+経緯は以上です。
+後輩はlinuxが何なのか分かっていなかったので、様々なタイプの利用者に向けて書きたいと思います。
+また、windows,mac,unix,linuxに触れられたらと思います。
+・今までwindowsを使っていて不便でない方、
+windowsを使いましょう。理由はたくさんありますが、原則、不便でないならそれはそれで幸せだと思います。
+また、「Windowsはだめだ。」的な頭ごなしの意見はプログラムが何たるか分かっていない人の意見だと思うので、無視すればいいです。win7やwin8は使いやすいOSだと思います。なによりもコンシューマー向けintelPCなら取りあえず動く。必要なソフトがほとんどあるという点は最強です。また、windowsを使っていてデータの連携に困るということは殆ど無いです。満足しているならほとんどストレスはありません。僕の家のデスクトップはwindowsです。理由はLineアプリが使えて安いから。
+・学校でlinuxやunixを使っていて勉強したいから。
+linuxであれば、ubuntuやlinuxMintがお勧めです。
+unixであれば、PC-BSDでもいいと思います。
+またお金があって、普段使いのパソコンで使いたい。マルチブートや仮想化は嫌だという方はMacでもいいと思います。でも、Macならあまり勉強にならないかもしれません。ただ、BSDはdropboxが使えない罠なんかもありますｗ
+以上が初心者向けのアドバイスです。XPの入っていたパソコンにlinuxを入れたい！という人は参考になるかどうかわかりません。なぜなら、今はlinuxにしろ、unixにしろ、パッケージマネージャーにソフトが揃っていて使いやすいOSだとディストリビューションによりますが、重いからです。
+「ちょっとまって！lubuntuは軽いよ！」という方は、あまり、OSの仕組みを理解されてないと思います。lubuntuはubuntuとシステムは変わりません。また、ubuntuが重い理由はインストール直後からたくさんのサービスがデフォルトで起動しているからです。この基本的な仕組みはlubuntuでも変わりません。パッケージマネージャーも同じです。
+中級者向けアドバイスはまた今度書きます。案外長くなってしまった。
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://test.cfw4.tokyo/wordpress/56/" class="catalogue-item">
+    <div>
+        <time datetime="2014-07-13 08:56:34 &#43;0000 UTC" class="catalogue-time">July 13, 2014</time>
+        <h1 class="catalogue-title">中間発表のやり方</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            さて、昨日中間発表が終わりました。
+しんどかったー。
+今回からlatexのコマンドをplatexからlualatexに変えました。
+あ、あと、ポイントとしては、プレゼンソフトの対応でしょうか、以下忘備録としてまとめ。
+mactex(texlive)のインストール
+基本的に公式に従う。だけど、MacPortから入れようとしたら、インストールは出来るんだけど、tlmgrのコマンドが見つからなかったので、おとなしく.pkgからインストールした。いつも思うことだけど、rikenのサーバーが早いです。
+linuxユーザーはtexliveを入れてください。大体のディストリビューションでもワンライナーで入ると思います。
+これで、lualatexのコマンドが通る。が、
+以下のコマンドを実行しておくこと
+$ sudo tlmgr update --self --all
+これで最新版にアップデートしてくれるっぽい。
+ちなみに、lualatexやxelatexはここ最近できたコマンドで、一気にpdfを作ってくれます。インストールやだって方はShareLatexを使おう。今は日本語に対応しています。バックアップにもなるしね。実はsharelatex自体もオープンソースgithubなのでサーバーに入れいたい方はどうぞ。こんなところでもrailsが使われててびっくり。
+これで、環境が整ったので、vimかなんかでスライドを作成する。自分のテンプレートは以下のとおり。
+内容は各セクションで\input{}で指定されてるファイルに書き込む。
+これで、pdfはできるのだが、PDFでプレゼンって難しいよね。そこで、以下のコマンドを実行。(imagemagick必須)
+convert -density 300 tex.pdf slide.jpg
+これで、すべてのスライドを画像に変換してくれる。-densityオプションで解像度を指定できる。コマンド例はdpi単位で指定してる。画像をパワポなり、リブレなりに投げれば発表者ツールが使える。
+これでプレゼンできるね！
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://test.cfw4.tokyo/wordpress/58/" class="catalogue-item">
+    <div>
+        <time datetime="2014-07-11 19:35:08 &#43;0000 UTC" class="catalogue-time">July 11, 2014</time>
+        <h1 class="catalogue-title">【予告】lualatex &#43; beamer &#43; 中間発表</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            さて、今日のお昼すぎに中間発表があります。
+技術的な話は次回に回すとして、脱!PowerPoint は案外楽にできることがわかった。
+texでスライドを作って、画像に書き出して、libre office を使ってプレゼンするってこと。PDFでプレゼンするのは難しいっていう方はおすすめ。
+次回の投稿では、beamerクラスでlatexする件をかくよ！
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://test.cfw4.tokyo/wordpress/48/" class="catalogue-item">
+    <div>
+        <time datetime="2014-07-02 17:10:42 &#43;0000 UTC" class="catalogue-time">July 2, 2014</time>
+        <h1 class="catalogue-title">Webで使えるターミナルを導入してみた！</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            大学から自分のサーバーに接続しよう！うききー！
+あれ、接続できない！プロキシか！
+うんぬー。と思っていたら、webベースでターミナルぐらいあるんじゃないのか？と思い、ググってみたら、、、
+ありましたよ。
+しかも、若干２７歳のFlorian Mounierさんが単独で開発したっぽい。
+名前は、Butterflyってソフト。
+すげぇ。→ 本家
+しかも、sslで立ち上げも可能だそうで、ネットワーク越しに接続できるんじゃないかと。
+（本人のブログによると、安全じゃないからやめれとのこと。）
+とりあえず、面白そうなので導入してみた。
+githubもあるみたいだけれど、yaourtでいれる。archのyaourtコマンドは非公式だけど便利。でも、空気読めみたいなところがあってちょっと面白い。実装が中途半端だったりね。
+AURにはそのまんまの名前で登録されてた。
+$ yaourt -S butterfly
+それで、今回はなんか、設定がいるのかと思ったけど、すんなり入ったようで、
+# butterfly.server.py --unsecure
+のコマンドが通れば、localhost:57575で確認できる。
+ここで、sslの設定しなきゃと思ったんだけど、なんか全部やってくれるっぽい。
+フランスのひとすごい。
+とりあえず、&#8211;unsecure　を外してコマンドを実行すれば、証明書つくんないとだめだよって怒られるので、怒られた通りに素直にコマンドを実行する。２つ実行したが忘れた。証明書を自動で作ってくれるので、リモートで使いたいパソコンに移しておく。
+オプションでipを指定できるので、家で使いたい人はルーターのローカルipを、リモートで使いたい人は0.0.0.0に設定する。
+この辺りは、本家のブログを読めばわかる。てゆーか、ほんとに使いやすい。
+そして、systemdでつかえる.serviceのファイルも用意してくれていた。最近はarch以外にもsystemdを使うディストリビューションが増えてきたらしく、なんか感動したね。rc.confが懐かしい。とかいいつつ、freebsdをいじるときには全然使うのだがw
+とかいいつつ、
+# systemctl enable butterfly
+# systemctl start butterfly
+を実行する。
+と、、ここで少しはまった。yaourtで入れてくれた/etc/systemd/system/butterfly.serviceのファイルにあるbutterfly.server.py　の実行行にオプションを入れたのがまずかったっぽい。ipをダブルクオーテーションで囲むと裏でエラーが人知れず吐かれるので、注意されたし。
+[bash]
+[Unit]
+Description=Butterfly Terminal Server
+After=network.target
+[Service]
+#ExecStart=/usr/bin/butterfly.server.py &#8211;host=&#8221;0.0.0.0&#8243;
+ExecStart=/usr/bin/butterfly.server.py &#8211;host=0.0.0.0
+Restart=on-abort
+[Install]
+WantedBy=multi-user.target
+[/bash]
+やった！
+
+これでリモートでサーバーにアクセスできるぜ！とおもったら、学内からアクセスできない。
+［追記］
+本日、学内からアクセスできました。原因はサービスを起動してなかったから。。。
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://test.cfw4.tokyo/wordpress/39/" class="catalogue-item">
+    <div>
+        <time datetime="2014-06-30 20:52:54 &#43;0000 UTC" class="catalogue-time">June 30, 2014</time>
+        <h1 class="catalogue-title">水族館</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            この間、水族館に行って来ました。
+[][1]実際のところ、魚にとって水槽って大きいのか小さいのか気になる。 天気が悪い時に限って水族館に行ってる気がする。
+ちなみに今はトップページもこの画像になってます。とっぷのページ
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://test.cfw4.tokyo/wordpress/25/" class="catalogue-item">
+    <div>
+        <time datetime="2014-06-28 01:13:43 &#43;0000 UTC" class="catalogue-time">June 28, 2014</time>
+        <h1 class="catalogue-title">PDFの編集 : 動かないコマンド</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            pdfの編集についての覚書
+動機としては毎月買ってる雑誌があるのだが、一定量が溜まってくると捨ててしまう。勿体無いので自炊してpdf化しておきたい。あと本棚が限界。
+有名なコマンドはpdftkだ。
+ただ、pdfの規格というか、仕組みには明るくないのだが、画像のみのpdfの場合、pdfからの画像抽出が難しい。
+というか、pdftkだったら無理だった。
+「スキャナで取得したイメージをそのままPDF化したものや、画像ソフトによって作成されたPDFではテキスト情報がPDF内に保存されていないため、直接抽出することは出来ない。」引用元
+とくに、雑誌のデータを画像データとしてではなく、スキャナから直接pdfに書き出していたので、そこではまった。
+pdfの編集には、前段階として、画像データで編集を行い、pdfにまとめれば良い。
+すると、pdf関連のコマンドはスッキリして便利だ。
+画像の回転などはimagemagickなどを使う。
+ちなみにMacユーザーなら以下のコマンドが使える。とりあえず、Mavericksでも生きてた。
+/usr/libexec/fax/imagestopdf
+パスを通すのとか面倒だし、滅多に使わないならそのまま使えばいいと思う。例えば、画像データを昇順でソートしておけば、ワイルドカードを使って書き出せる。
+/usr/libexec/fax/imagestopdf *.jpg out.pdf
+ちなみに、archlinuxユーザーの方はpdftkを使うしかないのだが、
+yaourt -S pdftk
+よりも、
+yaourt -S pdftk-bin
+の方を使えば、余計なビルドしなくて済みます。そんなにかからないだろうと思ってビルドすると永遠かかります。なんか、バージョン違いのGCCのビルドを始めたりする。
+ちなみに抽出できなかったPDFの画像は、pdfをonedriveで.docxに変換してunzipして取り出した。
+なんてバットノウハウ！
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://test.cfw4.tokyo/wordpress/12/" class="catalogue-item">
+    <div>
+        <time datetime="2014-06-20 22:28:09 &#43;0000 UTC" class="catalogue-time">June 20, 2014</time>
+        <h1 class="catalogue-title">そんな午前の過ごし方</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            さてブログを立ち上げました！
+なんと！結構前から話題のWordPressです。
+いいね。
+あと個人用にtracがどうしても欲しくなり、レンタルサーバーも考えたのですが、お古のlet&#8217;snote CF-W4 があったので。ピリッと自宅サーバーにしました。
+お金かかると思っていたのですが、ドメインにこだわらなければ、電気代だけですみます。現状、WordPressとtracしかないのでなにかオススメがあれば教えて下さいな。
+夏はカルピス。
+あと、このページはarchlinuxで動いています。突貫2日で立ち上げたブログです。セキュリティで悩むぐらいアクセスが来ればいいなぁ。
+ハカーの皆様、どうぞ仲良くしてくださいませ。
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://test.cfw4.tokyo/wordpress/99/" class="catalogue-item">
+    <div>
+        <time datetime="2013-12-31 15:00:58 &#43;0000 UTC" class="catalogue-time">December 31, 2013</time>
+        <h1 class="catalogue-title">はじめに</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            他人から見ればどうでも良いことをグダグダ綴るページ
+日常あり、開発あり、目的は人生をハックすること。
+by naniwa
+ちょっぴり読書とがっつりアニメが好きな僕です。
+管理人とは悪友であり僕が彼の日本語アドバイザー。
+記事書いてみないかと誘われ。
+どうでもいいことをアツく語るページになりそうです。
+by klf
+        </p>
+    </div>
+</a>
+
+		
+	</div>
+	
+	<div class="pagination">
+		
+			<a href="/page/5/" class="left arrow">&#8592;</a>
+		
+		
+	
+		<span>6</span>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2019-08-03 14:21:08.378756656 &#43;0000 UTC m=&#43;0.289469833">2019</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

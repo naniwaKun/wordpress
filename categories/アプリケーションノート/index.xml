@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>アプリケーションノート on あんなことやこんなこと</title>
-    <link>https://test.cfw4.tokyo/categories/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%8E%E3%83%BC%E3%83%88/</link>
+    <link>https://naniwakun.github.io/categories/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%8E%E3%83%BC%E3%83%88/</link>
     <description>Recent content in アプリケーションノート on あんなことやこんなこと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 20 Mar 2016 11:31:32 +0000</lastBuildDate>
     
-	<atom:link href="https://test.cfw4.tokyo/categories/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%8E%E3%83%BC%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://naniwakun.github.io/categories/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%8E%E3%83%BC%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>読み上げアプリ作ったので公開する。</title>
-      <link>https://test.cfw4.tokyo/wordpress/301/</link>
+      <link>https://naniwakun.github.io/wordpress/301/</link>
       <pubDate>Sun, 20 Mar 2016 11:31:32 +0000</pubDate>
       
-      <guid>https://test.cfw4.tokyo/wordpress/301/</guid>
+      <guid>https://naniwakun.github.io/wordpress/301/</guid>
       <description>しょぼい読み上げアプリを作ったのでテンションで公開しようと思う。クリップボードを0.1秒間隔で監視して読み上げるアプリケーションです。棒読みちゃんの設定がややこしいので完全に自分向け。僕はツイキャスの読み上げに使ってます。
 動作確認環境は、64bit windows10 だけど、たぶん最新のjavaの環境とクリップボードがあれば動くと思う（未確認）。興味のある人は勝手に使ってくださいという気分です。
 また、このアプリケーションは個人が趣味の範囲（いかなる事業, 営利活動とも無関係）で書いたものです。
@@ -32,10 +32,10 @@
     
     <item>
       <title>podTerm : Podcastはterminalで聞こう！</title>
-      <link>https://test.cfw4.tokyo/wordpress/158/</link>
+      <link>https://naniwakun.github.io/wordpress/158/</link>
       <pubDate>Tue, 17 Feb 2015 07:55:02 +0000</pubDate>
       
-      <guid>https://test.cfw4.tokyo/wordpress/158/</guid>
+      <guid>https://naniwakun.github.io/wordpress/158/</guid>
       <description>皆さん、podcastをどうやって聞いてますでしょうか？iTunes?, iphone?, android?
 僕はガラケーユーザーだし、ノートパソコンは研究で使うからあんまり汚したくない。かと言って家のWindowsに iTunes を入れるのは嫌だ。でも、Podcast聞く時って作業中とかだしな。RSSのURLだけあれば、いいんだよなー。って考えてるうちに作っちゃいました。
 一応、terminalからpodcastのエピソードをダウンロードするソフトならあったんだけど、ダウンロードする必要ある？

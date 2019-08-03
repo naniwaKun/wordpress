@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>便利コマンド on あんなことやこんなこと</title>
-    <link>https://test.cfw4.tokyo/categories/%E4%BE%BF%E5%88%A9%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</link>
+    <link>https://naniwakun.github.io/categories/%E4%BE%BF%E5%88%A9%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</link>
     <description>Recent content in 便利コマンド on あんなことやこんなこと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 17 Nov 2014 02:01:41 +0000</lastBuildDate>
     
-	<atom:link href="https://test.cfw4.tokyo/categories/%E4%BE%BF%E5%88%A9%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://naniwakun.github.io/categories/%E4%BE%BF%E5%88%A9%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>skypeで使えるコマンドまとめ</title>
-      <link>https://test.cfw4.tokyo/wordpress/128/</link>
+      <link>https://naniwakun.github.io/wordpress/128/</link>
       <pubDate>Mon, 17 Nov 2014 02:01:41 +0000</pubDate>
       
-      <guid>https://test.cfw4.tokyo/wordpress/128/</guid>
+      <guid>https://naniwakun.github.io/wordpress/128/</guid>
       <description>最近さしぶりにskypeをしていたらp2pベースからクラウドベースに変わったこともあり、コマンドが変わっていた(というか減った？)ので、忘備録をまとめることにした。
 /add とか /kick とかのあれですね。もっとバリエーションがあるので知っておいたほうがいいです。
 僕は、いわゆるskypeチャンネルとかで募集をかけてホストで会議なんかをやってたりするので知っておくとネットの大海原から身を守れますｗでもややこしいよね。初心者でも、”こういうことができる”っていうことを知ってるだけで違うかもしれません。スマホからも使えるし。僕はガラケーなんだけど。
@@ -39,10 +39,10 @@ skypeのコマンドが減っているようでこんな程度しかできなく
     
     <item>
       <title>中間発表のやり方</title>
-      <link>https://test.cfw4.tokyo/wordpress/56/</link>
+      <link>https://naniwakun.github.io/wordpress/56/</link>
       <pubDate>Sun, 13 Jul 2014 08:56:34 +0000</pubDate>
       
-      <guid>https://test.cfw4.tokyo/wordpress/56/</guid>
+      <guid>https://naniwakun.github.io/wordpress/56/</guid>
       <description>さて、昨日中間発表が終わりました。
 しんどかったー。
 今回からlatexのコマンドをplatexからlualatexに変えました。
@@ -65,10 +65,10 @@ convert -density 300 tex.pdf slide.jpg
     
     <item>
       <title>PDFの編集 : 動かないコマンド</title>
-      <link>https://test.cfw4.tokyo/wordpress/25/</link>
+      <link>https://naniwakun.github.io/wordpress/25/</link>
       <pubDate>Sat, 28 Jun 2014 01:13:43 +0000</pubDate>
       
-      <guid>https://test.cfw4.tokyo/wordpress/25/</guid>
+      <guid>https://naniwakun.github.io/wordpress/25/</guid>
       <description>pdfの編集についての覚書
 動機としては毎月買ってる雑誌があるのだが、一定量が溜まってくると捨ててしまう。勿体無いので自炊してpdf化しておきたい。あと本棚が限界。
 有名なコマンドはpdftkだ。
